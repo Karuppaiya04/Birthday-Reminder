@@ -2,15 +2,15 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
-import { AuthProvider } from './context/AuthContext'
-import { ThemeProvider } from './context/ThemeContext'
+import { AuthProvider } from './contexts/AuthContext'
+import { WorkspaceProvider } from './contexts/WorkspaceContext'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <ThemeProvider>
-      <AuthProvider>
+    <AuthProvider>
+      <WorkspaceProvider>
         <App />
-      </AuthProvider>
-    </ThemeProvider>
+      </WorkspaceProvider>
+    </AuthProvider>
   </StrictMode>
 )
